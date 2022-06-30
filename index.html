@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Daily Stand-Up</title>
+  <link rel="icon" type="image/svg" sizes="16x16" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pjxzdmcgdmlld0JveD0iMCAwIDY0IDY0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojZmZhYjAwO30uY2xzLTJ7ZmlsbDojZWZjNTg5O30uY2xzLTN7ZmlsbDojM2UyYzI3O30uY2xzLTR7ZmlsbDojYmQ3ZjAwO30uY2xzLTV7ZmlsbDojMmQyZDJkO308L3N0eWxlPjwvZGVmcz48dGl0bGUvPjxnIGlkPSJnaXJhZmZlIj48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik00NywyN3Y1TDQxLDUxdjRhNiw2LDAsMCwxLTYsNkgyOWE2LDYsMCwwLDEtNi02VjUxTDE3LDMyVjI3YzAtLjI2LDAtLjUyLDAtLjc4QTEzLjg2LDEzLjg2LDAsMCwxLDE4Ljg4LDIwYTE0LjE1LDE0LjE1LDAsMCwxLDIuODYtMy40OSwzLDMsMCwwLDAsLjI1LS4yNUEzLjk0LDMuOTQsMCwwLDAsMjIuNjUsMTJMMjEuMzIsOWMtLjExLDAtLjIxLDAtLjMyLDBhMywzLDAsMSwxLC40Mi02QTMsMywwLDAsMSwyMy45LDUuMjYsMi45NCwyLjk0LDAsMCwxLDI0LDYuNDNhNCw0LDAsMCwwLC4yMywyLjI2bDEuMjMsMi43OGEzLDMsMCwwLDAsMy4yMiwxLjczQTEzLjI5LDEzLjI5LDAsMCwxLDMwLjIxLDEzaDMuNThhMTMuMjksMTMuMjksMCwwLDEsMS41Ni4xNywzLDMsMCwwLDAsMy4yMi0xLjczbDEuMTktMi42OUE0LjM2LDQuMzYsMCwwLDAsNDAsNi4zOCwyLjM0LDIuMzQsMCwwLDEsNDAsNmEzLDMsMCwxLDEsMywzYy0uMTEsMC0uMjEsMC0uMzIsMGwtMS4zMywzQTMuOTQsMy45NCwwLDAsMCw0MiwxNi4yNmwuMjUuMjVBMTQuMTUsMTQuMTUsMCwwLDEsNDUuMTIsMjAsMTMuODYsMTMuODYsMCwwLDEsNDcsMjYuMjJDNDcsMjYuNDgsNDcsMjYuNzQsNDcsMjdaIi8+PHJlY3QgY2xhc3M9ImNscy0yIiBoZWlnaHQ9IjE0IiByeD0iNiIgcnk9IjYiIHdpZHRoPSIxOCIgeD0iMjMiIHk9IjQ3Ii8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMjksNTZhMSwxLDAsMCwxLTEtMVY1M2ExLDEsMCwwLDEsMiwwdjJBMSwxLDAsMCwxLDI5LDU2WiIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTM1LDU2YTEsMSwwLDAsMS0xLTFWNTNhMSwxLDAsMCwxLDIsMHYyQTEsMSwwLDAsMSwzNSw1NloiLz48cGF0aCBjbGFzcz0iY2xzLTQiIGQ9Ik01NywyOUg1NWExMi45MSwxMi45MSwwLDAsMS04LTIuNzhBMTMuODYsMTMuODYsMCwwLDAsNDUuMTIsMjBhMTQuMTUsMTQuMTUsMCwwLDAtMi44Ni0zLjQ5TDQyLDE2LjI2QTIuMjYsMi4yNiwwLDAsMSw0MiwxNmgyQTEzLDEzLDAsMCwxLDU3LDI5WiIvPjxwYXRoIGNsYXNzPSJjbHMtNCIgZD0iTTIyLDE2YTIuMjYsMi4yNiwwLDAsMSwwLC4yNiwzLDMsMCwwLDEtLjI1LjI1QTE0LjE1LDE0LjE1LDAsMCwwLDE4Ljg4LDIwLDEzLjg2LDEzLjg2LDAsMCwwLDE3LDI2LjIyLDEyLjkxLDEyLjkxLDAsMCwxLDksMjlIN0ExMywxMywwLDAsMSwyMCwxNloiLz48Y2lyY2xlIGNsYXNzPSJjbHMtNSIgY3g9IjM4LjUiIGN5PSIzMi41IiByPSIxLjUiLz48Y2lyY2xlIGNsYXNzPSJjbHMtNSIgY3g9IjI1LjUiIGN5PSIzMi41IiByPSIxLjUiLz48L2c+PC9zdmc+" />
+  <style>
+    body {
+      font-family: sans-serif;
+      font-size: 5vh;
+      padding: 5%;
+    }
+    #content {
+      margin: auto;
+      white-space: nowrap;
+    }
+    #head {
+      color: #799;
+      float:left;
+    }
+    #today {
+      color: #8aa;
+      float:right;
+    }
+    #timer {
+      float:right;
+      font-family: fira code, monospace;
+      font-size: 5em;
+      margin: 5px 0px;
+    }
+    #names {
+      clear: both;
+      color: #555;
+      font-size: .7em;
+      float: left;
+    }
+    #docu {
+      border-top: 1px solid #ddd;
+      clear:both;
+      color: #ccc;
+      font-size: 10pt;
+      margin-top: 30px;
+      padding-top: 10px;
+    }
+    li {
+      line-height: 1.5em;
+    }
+    .al {
+      animation: pulse .5s ease infinite alternate;
+    }
+    @keyframes pulse {
+      0% {opacity: 0;}
+      100% {opacity: 1;}
+    }
+  </style>
+</head>
+
+<body>
+  <div id="content">
+    <h3 id="today"></h3>
+    <h3 id="head">Daily Stand-Up</h3>
+    <ol id="names"></ol>
+    <h1 id="timer"></h1>
+    <div id="docu">2022 Maik Lindner // SPACE restarts timer // url-parameters: names=comma,separated,list&time=3</div>
+  </div>
+  <script>
+    const parValues = new URLSearchParams(window.location.search)
+    const parNames = (parValues.get('names') || 'Donatello,Leonardo,Michelangelo,Raphael').split(',')
+    const parMaxTime = parValues.get('time') || 3
+
+    var
+      docNames = document.getElementById('names'),
+      docToday = document.getElementById('today'),
+      docTimer = document.getElementById("timer"),
+      t0 = new Date,
+      d = [],
+      varMaxColor = 200
+
+    document.addEventListener('keyup', event => {
+      if (event.code === 'Space') {
+        t0 = new Date
+      }
+    })
+
+    function shuffleArray(array) {
+      let
+        i = 0,
+        r = ''
+      array.forEach(element => {
+        d[i] = [Math.random(),element]
+        i++
+      });
+      d.sort()
+      d.forEach(element => {
+        r = r + '<li>'+element[1]+'</li>'
+      });
+      return r
+    }
+    
+    docNames.innerHTML = shuffleArray(parNames); 
+    docToday.innerHTML = t0.toLocaleDateString("en-CA"); 
+    docTimer.innerHTML = ((Math.floor(((parMaxTime*60) % 3600) / 60)<10)?'0'+Math.floor(((parMaxTime*60) % 3600) / 60):Math.floor(((parMaxTime*60) % 3600) / 60)) + ":" + ((Math.floor((parMaxTime*60) % 60)<10)?'0'+Math.floor((parMaxTime*60) % 60):Math.floor((parMaxTime*60) % 60)); 
+
+    var x = setInterval(function() {
+      let t1 = new Date().getTime()
+      let varDiff = (parMaxTime*60+1) - (t1 - t0)/1000,
+        varColRed = Math.floor(varMaxColor-(varMaxColor*varDiff)/(parMaxTime*60))
+        varColGreen = Math.floor((varMaxColor*varDiff)/(parMaxTime*60))
+        varMinutes = Math.abs(varDiff<0?Math.ceil((varDiff % 3600) / 60):Math.floor((varDiff % 3600) / 60))
+        varSeconds = Math.abs(Math.floor(varDiff % 60))
+        varText = ((varMinutes<10)?'0'+varMinutes:varMinutes) + ":" + ((varSeconds<10)?'0'+varSeconds:varSeconds)
+      docTimer.innerHTML = '<div '+((varDiff<0)?'class="al" ':' ')+'style="color:rgb('+varColRed+',0,0)">'+varText+'</div>'
+
+    }, 1000)
+
+  </script>
+
+</body>
+
+</html>
