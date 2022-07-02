@@ -22,6 +22,13 @@ const parValues = new URLSearchParams(window.location.search)
       }
     })
 
+    document.getElementById('names').addEventListener('click', event => {
+      docNames.innerHTML = shuffleArray(parNames)
+    })
+    document.getElementById('timer').addEventListener('click', event => {
+      t0 = new Date
+    })
+
     inpMaxTime.addEventListener('keyup', event => {
       if (inpMaxTime.value === '') inpMaxTime.value = 0
       if (inpMaxTime.value > 60) inpMaxTime.value = 60

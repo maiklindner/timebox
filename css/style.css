@@ -68,7 +68,7 @@ body {
     border-top: 1px solid var(--lightgrey);
     clear:both;
     color: var(--grey);
-    font-size: 1.5vw;
+    font-size: 1vw;
     margin-top: 40px;
     padding-top: 5px;
   }
