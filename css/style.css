@@ -1,0 +1,88 @@
+:root1 {
+    --red: rgb(234, 0, 41);
+    --darkred: rgb(49, 23, 31);
+    --teal: rgb(47, 124, 133);
+    --lightteal: rgb(100, 170, 178);
+    --grey: rgb(180,180,180);
+    --lightgrey: rgb(200,200,200);
+  }
+:root {
+    --red: rgb(234, 0, 41);
+    --darkred: rgba(255, 255, 255, 0.95);
+    --teal: rgb(47, 124, 133);
+    --lightteal: rgb(100, 170, 178);
+    --grey: rgba(255,255,255,.4);
+    --lightgrey: rgba(255,255,255,.3);
+    --white: rgb(49, 23, 31);
+  }
+body {
+    background: var(--white);
+    color: var(--darkred);
+    font-family: sans-serif;
+    font-size: 5vh;
+    padding: 5%;
+  }
+  #content {
+    margin: auto;
+    white-space: nowrap;
+  }
+  #head {
+    color: var(--red);
+    float:left;
+    text-transform: uppercase;
+  }
+  #inp {
+    float:right;
+    color: var(--lightteal);
+  }
+  #inpMaxTime {
+    background: var(--white);
+    border: 1px solid transparent;
+    color: var(--teal);
+    font-size: 1em;
+    font-weight: bold;
+    text-align: right;
+    width: 3em;
+  }
+  #inpMaxTime:hover {
+    border: 1px solid var(--lightteal);
+  }
+  #timer {
+    color: var(--darkred);
+    float:right;
+    font-family: fira code, monospace;
+    font-size: 19vw;
+    margin: 5px 0px;
+  }
+  #names {
+    clear: both;
+    color: var(--darkred);
+    font-size: 3vh;
+    float: left;
+    padding-left: 3vw;
+  }
+  li {
+    line-height: 1.5em;
+  }
+  #docu {
+    border-top: 1px solid var(--lightgrey);
+    clear:both;
+    color: var(--grey);
+    font-size: 1.5vw;
+    margin-top: 40px;
+    padding-top: 5px;
+  }
+  p {
+    padding: 0px;
+    margin: 2px 0px;
+  }
+  .al1 {
+    color: var(--red);
+  }
+  .al2 {
+    animation: pulse .5s ease infinite alternate;
+  }
+  @keyframes pulse {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
