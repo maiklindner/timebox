@@ -46,7 +46,7 @@ const parValues = new URLSearchParams(window.location.search)
     }
 
     function resizeNames() {
-        document.getElementById("names").style.fontSize = 12/d.length+'vw'
+        document.getElementById("names").style.fontSize = (12/d.length>4?4:12/d.length)+'vw'
     }
 
     function shuffleArray(array) {
