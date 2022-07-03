@@ -54,6 +54,9 @@ body {
     font-size: 19vw;
     margin: 5px 0px;
   }
+  .hours {
+    font-size: 14vw;
+  }
   #names {
     clear: both;
     color: var(--darkred);

@@ -13,12 +13,17 @@ const parValues = new URLSearchParams(window.location.search)
       switch(event.code) {
         case 'Space':
           t0 = new Date
-          break;
+          break
         case 'KeyS':
           docNames.innerHTML = shuffleArray(parNames)
-          break;
-        case 'KeyB':
-
+          break
+        case 'KeyT':
+          inpMaxTime.select()
+          break
+        case 'Enter':
+        case 'Escape':
+          inpMaxTime.blur()
+          break
       }
     })
 
@@ -30,16 +35,14 @@ const parValues = new URLSearchParams(window.location.search)
     })
 
     inpMaxTime.addEventListener('keyup', event => {
-      if (inpMaxTime.value === '') inpMaxTime.value = 0
-      if (inpMaxTime.value > 60) inpMaxTime.value = 60
+      inpMaxTime.value = inpMaxTime.value.replace(/\D/g, '')
       parMaxTime = inpMaxTime.value
       resizeMaxTime()
       t0 = new Date
     })
 
     function resizeMaxTime() {
-      console.log('parMaxTime:'+parMaxTime.length)
-      inpMaxTime.style.width = parMaxTime.length + "ch"
+      inpMaxTime.style.width = parMaxTime.length<1?1:parMaxTime.length + "ch"
     }
 
     function resizeNames() {
@@ -70,9 +73,10 @@ const parValues = new URLSearchParams(window.location.search)
     var x = setInterval(function() {
       let t1 = new Date().getTime()
       let varDiff = (parMaxTime*60+1) - (t1 - t0)/1000,
+        varHours = Math.abs(varDiff<0?Math.ceil(varDiff / 3600):Math.floor(varDiff / 3600))
         varMinutes = Math.abs(varDiff<0?Math.ceil((varDiff % 3600) / 60):Math.floor((varDiff % 3600) / 60))
         varSeconds = Math.abs(Math.floor(varDiff % 60))
-        varText = ((varMinutes<10)?'0'+varMinutes:varMinutes) + ":" + ((varSeconds<10)?'0'+varSeconds:varSeconds)
-      docTimer.innerHTML = '<div class="'+((varDiff<(parMaxTime*10+1))?' al1':'')+((varDiff<0)?' al2':'')+'">'+varText+'</div>'
-
+        varText = (varHours>0?varHours+':':'')+((varMinutes<10)?'0'+varMinutes:varMinutes) + ":" + ((varSeconds<10)?'0'+varSeconds:varSeconds)
+      docTimer.innerHTML = '<div class="'+((varDiff<(parMaxTime*10+1))?' al1':'')+((varDiff<0)?' al2':'')+((varHours>0)?' hours':'')+'">'+varText+'</div>'
+      document.title = (varDiff<0?'-':'') + varText + ' | TIMEBOX'
     }, 1000)
