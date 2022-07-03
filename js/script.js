@@ -36,6 +36,7 @@ const parValues = new URLSearchParams(window.location.search)
 
     inpMaxTime.addEventListener('keyup', event => {
       inpMaxTime.value = inpMaxTime.value.replace(/\D/g, '')
+      inpMaxTime.value = inpMaxTime.value>5999?5999:inpMaxTime.value
       parMaxTime = inpMaxTime.value
       resizeMaxTime()
       t0 = new Date
