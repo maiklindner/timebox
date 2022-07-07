@@ -11,7 +11,7 @@
     --darkred: rgba(255, 255, 255, 0.95);
     --teal: rgb(47, 124, 133);
     --lightteal: rgb(100, 170, 178);
-    --grey: rgba(255,255,255,.4);
+    --grey: rgba(255,255,255,.25);
     --lightgrey: rgba(255,255,255,.3);
     --white: rgb(49, 23, 31);
   }
@@ -84,6 +84,16 @@ body {
   }
   .al2 {
     animation: pulse .5s ease infinite alternate;
+  }
+  .block {
+    background-color: var(--grey);
+    color: var(--white);
+    font-size: .8em;
+    text-transform: uppercase;
+    padding: .2em .4em;
+  }
+  a {
+    color: var(--grey);
   }
   @keyframes pulse {
     0% {opacity: 0;}

@@ -10,6 +10,7 @@ const parValues = new URLSearchParams(window.location.search)
       d = []
 
     document.addEventListener('keyup', event => {
+      console.log(event.code)
       switch(event.code) {
         case 'Space':
           t0 = new Date
@@ -21,8 +22,21 @@ const parValues = new URLSearchParams(window.location.search)
           inpMaxTime.select()
           break
         case 'Enter':
+        case 'NumpadEnter':
         case 'Escape':
           inpMaxTime.blur()
+          break
+        case 'NumpadAdd':
+        case 'BracketRight':
+          inpMaxTime.value++
+          t0.setMinutes(t0.getMinutes()+1);
+          resizeMaxTime()
+          break
+        case 'NumpadSubtract':
+        case 'Slash':
+          inpMaxTime.value--
+          t0.setMinutes(t0.getMinutes()-1);
+          resizeMaxTime()
           break
       }
     })
@@ -43,7 +57,8 @@ const parValues = new URLSearchParams(window.location.search)
     })
 
     function resizeMaxTime() {
-      inpMaxTime.style.width = parMaxTime.length<1?1:parMaxTime.length + "ch"
+      inpMaxTime.style.width = parMaxTime.length<1?1:parMaxTime.length + " ch"
+      console.log(inpMaxTime.style.width)
     }
 
     function resizeNames() {
