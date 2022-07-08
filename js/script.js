@@ -1,5 +1,5 @@
 const parValues = new URLSearchParams(window.location.search)
-    const parNames = (parValues.get('names') || 'Donatello,Leonardo,Michelangelo,Raphael').split(',')
+    const parNames = (parValues.get('names') || 'Rainer,Dennis,Jakub,Maik').split(',')
     var parMaxTime = parValues.get('time') || '3'
 
     var
@@ -29,13 +29,11 @@ const parValues = new URLSearchParams(window.location.search)
         case 'NumpadAdd':
         case 'BracketRight':
           inpMaxTime.value++
-          t0.setMinutes(t0.getMinutes()+1);
           resizeMaxTime()
           break
         case 'NumpadSubtract':
         case 'Slash':
-          inpMaxTime.value--
-          t0.setMinutes(t0.getMinutes()-1);
+          inpMaxTime.value>0?inpMaxTime.value--:0
           resizeMaxTime()
           break
       }
@@ -51,18 +49,17 @@ const parValues = new URLSearchParams(window.location.search)
     inpMaxTime.addEventListener('keyup', event => {
       inpMaxTime.value = inpMaxTime.value.replace(/\D/g, '')
       inpMaxTime.value = inpMaxTime.value>5999?5999:inpMaxTime.value
-      parMaxTime = inpMaxTime.value
       resizeMaxTime()
       t0 = new Date
     })
 
     function resizeMaxTime() {
-      inpMaxTime.style.width = parMaxTime.length<1?1:parMaxTime.length + " ch"
-      console.log(inpMaxTime.style.width)
+      parMaxTime = inpMaxTime.value
+      inpMaxTime.style.width = parMaxTime.length<1?1:parMaxTime.length + "ch"
     }
 
     function resizeNames() {
-        document.getElementById("names").style.fontSize = (12/d.length>4?4:12/d.length)+'vw'
+        document.getElementById("names").style.fontSize = (11/d.length>4?4:11/d.length)+'vw'
     }
 
     function shuffleArray(array) {
