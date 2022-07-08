@@ -5,6 +5,8 @@
   <title>TIMEBOX</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico" sizes="16x16" />
   <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" id="dawn" href="css/dawn.css" />
+  <link rel="stylesheet" type="text/css" id="dusk" href="css/dusk.css" />
 </head>
 
 <body>
@@ -14,8 +16,9 @@
     <ol id="names"></ol>
     <h1 id="timer"></h1>
     <div id="docu">
-      <p><span class="block">s</span> = shuffle names // <span class="block">t</span> or <span class="block">+</span> / <span class="block">-</span> = change timer // <span class="block">space</span> = restart timer // Or click/tap on these elements</p>
-      <p>url-parameters: [names=comma,separated,list] / [time=0..n] // e.g. ?names=Alpha,Beta,Gamma&time=10</p>
+      <p><span class="block">s</span> or click/tap on names = shuffle names // <span class="block">t</span> or <span class="block">+</span> / <span class="block">-</span> or click/tap on time upper right before &quot;min&quot; = change timer // <span class="block">n</span> or click/tap headline &quot;TIMEBOX&quot; = edit names</p>
+      <p><span class="block">space</span> or click/tap timer = restart timer // <span class="block">d</span> or doubleclick anywhere = from dusk till dawn</p>
+      <p>URL-parameters: [names=comma,separated,list] / [time=0..n] // Click/tap here: copy current settings as url-parameters to clipboard</p>
       <p>2022 Maik Lindner // <a href="https://github.com/maiklindner/timebox">Github</a> // <a href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public License Version 2.0</a></p>
     </div>
   </div>

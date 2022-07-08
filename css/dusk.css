@@ -1,0 +1,9 @@
+:root {
+  --colorhead: rgb(234, 0, 41);
+  --colortext: rgba(255, 255, 255, 0.95);
+  --colorbg: rgb(49, 23, 31);
+  --colortime: rgb(47, 124, 133);
+  --colormin: rgb(100, 170, 178);
+  --colorfoot: rgba(255,255,255,.25);
+  --colorline: rgba(255,255,255,.3);
+}

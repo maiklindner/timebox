@@ -1,23 +1,6 @@
-:root1 {
-    --red: rgb(234, 0, 41);
-    --darkred: rgb(49, 23, 31);
-    --teal: rgb(47, 124, 133);
-    --lightteal: rgb(100, 170, 178);
-    --grey: rgb(180,180,180);
-    --lightgrey: rgb(200,200,200);
-  }
-:root {
-    --red: rgb(234, 0, 41);
-    --darkred: rgba(255, 255, 255, 0.95);
-    --teal: rgb(47, 124, 133);
-    --lightteal: rgb(100, 170, 178);
-    --grey: rgba(255,255,255,.25);
-    --lightgrey: rgba(255,255,255,.3);
-    --white: rgb(49, 23, 31);
-  }
 body {
-    background: var(--white);
-    color: var(--darkred);
+    background: var(--colorbg);
+    color: var(--colortext);
     font-family: sans-serif;
     font-size: 5vh;
     padding: 5%;
@@ -27,28 +10,28 @@ body {
     white-space: nowrap;
   }
   #head {
-    color: var(--red);
+    color: var(--colorhead);
     float:left;
     text-transform: uppercase;
   }
   #inp {
     float:right;
-    color: var(--lightteal);
+    color: var(--colormin);
   }
   #inpMaxTime {
-    background: var(--white);
+    background: var(--colorbg);
     border: 1px solid transparent;
-    color: var(--teal);
+    color: var(--colortime);
     font-size: 1em;
     font-weight: bold;
     text-align: right;
     width: 3em;
   }
   #inpMaxTime:hover {
-    border: 1px solid var(--lightteal);
+    border: 1px solid var(--colormin);
   }
   #timer {
-    color: var(--darkred);
+    color: var(--colortext);
     float:right;
     font-family: fira code, monospace;
     font-size: 19vw;
@@ -59,7 +42,7 @@ body {
   }
   #names {
     clear: both;
-    color: var(--darkred);
+    color: var(--colortext);
     font-size: 3vh;
     float: left;
     padding-left: 3vw;
@@ -68,9 +51,9 @@ body {
     line-height: 1.5em;
   }
   #docu {
-    border-top: 1px solid var(--lightgrey);
+    border-top: 1px solid var(--colorline);
     clear:both;
-    color: var(--grey);
+    color: var(--colorfoot);
     font-size: 1vw;
     margin-top: 40px;
     padding-top: 5px;
@@ -80,20 +63,21 @@ body {
     margin: 2px 0px;
   }
   .al1 {
-    color: var(--red);
+    color: var(--colorhead);
   }
   .al2 {
     animation: pulse .5s ease infinite alternate;
   }
   .block {
-    background-color: var(--grey);
-    color: var(--white);
-    font-size: .8em;
-    text-transform: uppercase;
+    background-color: var(--colorfoot);
+    color: var(--colorbg);
+    font-size: .72em;
+    font-family: monospace;
     padding: .2em .4em;
+    text-transform: uppercase;
   }
   a {
-    color: var(--grey);
+    color: var(--colorfoot);
   }
   @keyframes pulse {
     0% {opacity: 0;}
