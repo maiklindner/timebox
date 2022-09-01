@@ -159,11 +159,11 @@ function togglePause () {
 }
 
 function toggleHelp(){
-  let d = document.getElementById('docu').style;
-  if (d.opacity == '0' || d.opacity == '') {
-    d.opacity = '1';
+  let d = document.getElementById('help').style;
+  if (d.display == 'block' || d.display == '') {
+    d.display = 'none';
   } else {
-    d.opacity = '0';
+    d.display = 'block';
   }
 }
 

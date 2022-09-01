@@ -67,6 +67,14 @@ body {
     margin-top: 40px;
     padding-top: 5px;
   }
+  #help {
+    clear: both;
+    transition: .5s;
+  }
+  #buttonhelp {
+    float: left;
+    margin: 0em .5em .1em 0em;
+  }
   p {
     padding: 0px;
     margin: 2px 0px;
