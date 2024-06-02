@@ -1,7 +1,7 @@
 const
   parValues = new URLSearchParams(window.location.search)
 var
-  parNames = (parValues.get('names') || 'Rainer,Dennis,Jakub,Maik').split(','),
+  parNames = (parValues.get('names') || 'Juls,Dennis,Maik').split(','),
   parMaxTime = parValues.get('time') || '3',
   parDuskDawn = parValues.get('dusk') || '1',
   inpMaxTime = document.getElementById('inpMaxTime'),
