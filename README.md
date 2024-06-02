@@ -7,6 +7,8 @@ Small app that can be used in daily stand-ups.
 names       - comma separated list of names
 time        - time in minutes
 
+URL can then be saved with the parameters.
+
 ## Hotkeys
 
 | key      | function      |
