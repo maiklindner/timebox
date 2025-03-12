@@ -1,7 +1,7 @@
 const
   parValues = new URLSearchParams(window.location.search)
 var
-  parNames = (parValues.get('names') || 'Juls,Dennis,Maik').split(','),
+  parNames = (parValues.get('names') || 'Rainer,Dennis,Jakub,Maik').split(','),
   parMaxTime = parValues.get('time') || '3',
   parDuskDawn = parValues.get('dusk') || '1',
   inpMaxTime = document.getElementById('inpMaxTime'),
@@ -15,13 +15,14 @@ var
   p = false,
   x;
 
-  cssdusk.disabled = (parDuskDawn == 0);
-  cssdawn.disabled = (parDuskDawn == 1);
+cssdusk.disabled = (parDuskDawn == 0);
+cssdawn.disabled = (parDuskDawn == 1);
 
 document.addEventListener('keyup', event => {
   console.log(event.code);
   switch (event.code) {
     case 'KeyR':
+    case 'Space':
       reset();
       break;
     case 'KeyS':
@@ -51,7 +52,6 @@ document.addEventListener('keyup', event => {
     case 'KeyD':
       toggleFromDuskTillDawn();
       break;
-    case 'Space':
     case 'KeyF':
       toggleFade();
       break;
@@ -60,6 +60,9 @@ document.addEventListener('keyup', event => {
       break;
     case 'KeyH':
       toggleHelp();
+      break;
+    case 'KeyU':
+      copyClip();
       break;
   }
 })
@@ -71,17 +74,21 @@ document.getElementById('names').addEventListener('click', event => {
   docNames.innerHTML = shuffleArray(parNames);
   clearSelection();
 })
-document.getElementById('names').addEventListener('dblclick', event => {
-  editNames();
-})
 document.getElementById('timer').addEventListener('click', event => {
-  t0 = new Date;
+  reset();
 })
 document.getElementById('buttonhelp').addEventListener('click', event => {
   toggleHelp();
 })
-document.getElementById('docu').addEventListener('click', event => {
+document.getElementById('min').addEventListener('click', event => {
+  togglePause();
+})
+document.getElementById('docuspan').addEventListener('click', event => {
   copyClip();
+})
+document.addEventListener('contextmenu', event => {
+  event.preventDefault();
+  editNames();
 })
 document.addEventListener('dblclick', event => {
   toggleFade();
@@ -138,7 +145,7 @@ function toggleFromDuskTillDawn() {
   }
 }
 
-function togglePause () {
+function togglePause() {
   let timer = document.getElementById('timer').style;
   if (p == false) {
     p = true;
@@ -158,9 +165,9 @@ function togglePause () {
   }
 }
 
-function toggleHelp(){
+function toggleHelp() {
   let d = document.getElementById('help').style;
-  if (d.display == 'block' || d.display == '') {
+  if (d.display == 'block') {
     d.display = 'none';
   } else {
     d.display = 'block';
@@ -172,7 +179,7 @@ function reset() {
   clearInterval(x);
   x = setTimeout(function () {
     count();
-  }, 0);
+  }, 10);
   x = setInterval(function () {
     count();
   }, 1000);
@@ -186,7 +193,7 @@ function clearSelection() {
 }
 
 function count() {
-  let t1 = new Date().getTime();
+  let t1 = new Date();
   let varDiff = (parMaxTime * 60 + 1) - (t1 - t0) / 1000,
     varHours = Math.abs(varDiff < 0 ? Math.ceil(varDiff / 3600) : Math.floor(varDiff / 3600))
   varMinutes = Math.abs(varDiff < 0 ? Math.ceil((varDiff % 3600) / 60) : Math.floor((varDiff % 3600) / 60))
