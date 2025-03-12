@@ -1,103 +1,129 @@
 body {
-    background: var(--colorbg);
-    color: var(--colortext);
-    font-family: sans-serif;
-    font-size: 5vh;
-    overflow: hidden;
-    padding: 5%;
+  background: var(--colorbg);
+  color: var(--colortext);
+  font-family: sans-serif;
+  font-size: 5vh;
+  overflow: hidden;
+  padding: 5%;
+}
+
+#space {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+#content {
+  margin: auto;
+  transition: .5s;
+  white-space: nowrap;
+}
+
+#head {
+  color: var(--colorhead);
+  float: left;
+  text-transform: uppercase;
+}
+
+#timeset {
+  float: right;
+}
+
+#min {
+  color: var(--colormin);
+}
+
+#inpMaxTime {
+  background: var(--colorbg);
+  border: 1px solid transparent;
+  color: var(--colortime);
+  font-size: 1em;
+  font-weight: bold;
+  text-align: right;
+  width: 3em;
+}
+
+#inpMaxTime:hover {
+  border: 1px solid var(--colormin);
+}
+
+#timer {
+  color: var(--colortext);
+  float: right;
+  font-family: fira code, monospace;
+  font-size: 19vw;
+  margin: 5px 0px;
+}
+
+.hours {
+  font-size: 14vw;
+}
+
+#names {
+  clear: both;
+  color: var(--colortext);
+  font-size: 3vh;
+  float: left;
+  padding-left: 3vw;
+}
+
+li {
+  line-height: 1.5em;
+}
+
+#docu {
+  border-top: 1px solid var(--colorline);
+  clear: both;
+  color: var(--colorfoot);
+  font-size: 1vw;
+  margin-top: 40px;
+  padding-top: 5px;
+}
+
+#help {
+  display: none;
+  clear: both;
+  transition: .5s;
+}
+
+#buttonhelp {
+  float: left;
+  margin: 0em .5em .1em 0em;
+}
+
+p {
+  padding: 0px;
+  margin: 2px 0px;
+}
+
+.al1 {
+  color: var(--colorhead);
+}
+
+.al2 {
+  animation: pulse .5s ease infinite alternate;
+}
+
+.block {
+  background-color: var(--colorfoot);
+  color: var(--colorbg);
+  font-size: .78em;
+  font-family: monospace;
+  font-weight: bold;
+  padding: .2em .4em 0em;
+  text-transform: uppercase;
+}
+
+a {
+  color: var(--colorfoot);
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
   }
-  #space {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+
+  100% {
+    opacity: 1;
   }
-  #content {
-    margin: auto;
-    transition: .5s;
-    white-space: nowrap;
-  }
-  #head {
-    color: var(--colorhead);
-    float:left;
-    text-transform: uppercase;
-  }
-  #timeset {
-    float:right;
-  }
-  #min {
-    color: var(--colormin);
-  }
-  #inpMaxTime {
-    background: var(--colorbg);
-    border: 1px solid transparent;
-    color: var(--colortime);
-    font-size: 1em;
-    font-weight: bold;
-    text-align: right;
-    width: 3em;
-  }
-  #inpMaxTime:hover {
-    border: 1px solid var(--colormin);
-  }
-  #timer {
-    color: var(--colortext);
-    float:right;
-    font-family: fira code, monospace;
-    font-size: 19vw;
-    margin: 5px 0px;
-  }
-  .hours {
-    font-size: 14vw;
-  }
-  #names {
-    clear: both;
-    color: var(--colortext);
-    font-size: 3vh;
-    float: left;
-    padding-left: 3vw;
-  }
-  li {
-    line-height: 1.5em;
-  }
-  #docu {
-    border-top: 1px solid var(--colorline);
-    clear:both;
-    color: var(--colorfoot);
-    font-size: 1vw;
-    margin-top: 40px;
-    padding-top: 5px;
-  }
-  #help {
-    clear: both;
-    transition: .5s;
-  }
-  #buttonhelp {
-    float: left;
-    margin: 0em .5em .1em 0em;
-  }
-  p {
-    padding: 0px;
-    margin: 2px 0px;
-  }
-  .al1 {
-    color: var(--colorhead);
-  }
-  .al2 {
-    animation: pulse .5s ease infinite alternate;
-  }
-  .block {
-    background-color: var(--colorfoot);
-    color: var(--colorbg);
-    font-size: .78em;
-    font-family: monospace;
-    font-weight: bold;
-    padding: .2em .4em 0em;
-    text-transform: uppercase;
-  }
-  a {
-    color: var(--colorfoot);
-  }
-  @keyframes pulse {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-  }
+}
