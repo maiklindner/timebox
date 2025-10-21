@@ -7,6 +7,15 @@ body {
   padding: 5%;
 }
 
+input,
+body,
+#head,
+#timer,
+#names,
+#help {
+  transition: .5s;
+}
+
 #space {
   position: absolute;
   top: 50%;
@@ -83,7 +92,6 @@ li {
 #help {
   display: none;
   clear: both;
-  transition: .5s;
 }
 
 #buttonhelp {
