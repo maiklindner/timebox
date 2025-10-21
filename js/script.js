@@ -49,6 +49,9 @@ document.addEventListener('keyup', event => {
     case 'KeyN':
       editNames();
       break;
+    case 'KeyM':
+      toggleNames();
+      break;
     case 'KeyD':
       toggleFromDuskTillDawn();
       break;
@@ -165,6 +168,20 @@ function togglePause() {
   }
 }
 
+function toggleNames() {
+  let h = document.getElementById('head').style;
+  let n = document.getElementById('names').style;
+  let t = document.getElementById('timer').style;
+  if (n.display == 'none') {
+    n.display = 'block';
+    h.display = 'block';
+    t.fontSize = '19vw';
+  } else {
+    n.display = 'none';
+    h.display = 'none';
+    t.fontSize = '25vw';
+  }
+}
 function toggleHelp() {
   let d = document.getElementById('help').style;
   if (d.display == 'block') {
